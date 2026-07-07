@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #fbf9f4;
+  --color-gold-100: #f5eedb;
+  --color-gold-200: #ebddb9;
+  --color-gold-300: #dec58e;
+  --color-gold-400: #cda55f;
+  --color-gold-500: #c5a880; /* Signature Gold */
+  --color-gold-600: #a7885b;
+  --color-gold-700: #876a43;
+  --color-gold-800: #695031;
+  --color-gold-900: #4f3b25;
+  --color-gold-950: #2e2013;
+
+  --color-charcoal-50: #f6f6f6;
+  --color-charcoal-100: #e5e5e5;
+  --color-charcoal-200: #cccccc;
+  --color-charcoal-300: #aaaaaa;
+  --color-charcoal-400: #808080;
+  --color-charcoal-500: #595959;
+  --color-charcoal-600: #404040;
+  --color-charcoal-700: #2d2d2d;
+  --color-charcoal-800: #1a1a1a;
+  --color-charcoal-900: #121212;
+  --color-charcoal-950: #0a0a0a;
+
+  --font-serif: var(--font-cormorant), Cormorant Garamond, serif;
+  --font-sans: var(--font-inter), Inter, system-ui, sans-serif;
+}
+
+:root {
+  --background: #0a0a0a;
+  --background-gradient: radial-gradient(circle at 50% 0%, #121212 0%, #0a0a0a 70%, #000000 100%);
+  --foreground: #f5eedb;
+  
+  --card-bg: rgba(26, 26, 26, 0.65);
+  --card-border: rgba(197, 168, 128, 0.15);
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  --card-inner-glow: inset 0 0 12px rgba(197, 168, 128, 0.05);
+  
+  --text-muted: #dcdcdc; /* High contrast bright grey for dark mode descriptions */
+  --section-sub: #121212;
+  
+  /* Navbar styling (constant dark-lux layout in both themes) */
+  --navbar-bg: rgba(10, 10, 10, 0.93);
+  --navbar-fg: #f5eedb;
+  --navbar-fg-muted: rgba(245, 238, 219, 0.75);
+  --navbar-border: rgba(197, 168, 128, 0.25);
+  
+  --input-bg: #0a0a0a;
+  
+  --map-filter: grayscale(0.2) contrast(1.1); /* Soft atmospheric map, highly visible */
+  --heading-shadow: none;
+
+  /* Force high contrast readability values for default dark mode */
+  --color-charcoal-300: #e2e2e2; /* Bright readable text */
+  --color-charcoal-400: #c8c8c8; /* Muted but very clear */
+  --color-charcoal-200: #fbf9f4; /* Bold headings */
+}
+
+/* Luxury Light Theme styling overrides */
+html.light {
+  --background: #fdfbf7;
+  --background-gradient: radial-gradient(circle at 50% 0%, #ffffff 0%, #fdfbf7 60%, #f5ecd5 100%);
+  --foreground: #14100a; /* deep espresso black */
+  
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(197, 168, 128, 0.32);
+  --card-shadow: 0 20px 45px -10px rgba(135, 106, 67, 0.14);
+  --card-inner-glow: inset 0 0 20px rgba(255, 255, 255, 0.75);
+  
+  --text-muted: #2d261e; /* Extremely readable dark warm brown */
+  --section-sub: #f6f0de; /* warm champagne linen */
+  
+  --input-bg: #ffffff;
+  
+  --map-filter: grayscale(0) contrast(1); /* Full color map in light mode for excellent visibility */
+  --heading-shadow: 0.5px 0.5px 1px rgba(135, 106, 67, 0.18);
+
+  /* Navbar styling in light mode */
+  --navbar-bg: rgba(253, 251, 247, 0.93);
+  --navbar-fg: #14100a;
+  --navbar-fg-muted: rgba(20, 16, 10, 0.75);
+  --navbar-border: rgba(197, 168, 128, 0.25);
+
+  /* Override Tailwind design tokens dynamically with high contrast light-mode colors */
+  --color-charcoal-950: #fdfbf7;
+  --color-charcoal-900: #f5eedb;
+  --color-charcoal-200: #14100a; /* Near black subheadings */
+  --color-charcoal-300: #1c150e; /* Deep charcoal-brown body text (very readable) */
+  --color-charcoal-400: #2c251d; /* Muted but very clear brown */
+
+  /* Darken the entire gold scale for light mode readability (fixes cutouts, tags, headings) */
+  --color-gold-50: #14100a;  /* deep espresso */
+  --color-gold-100: #1c150e; /* deep dark bronze */
+  --color-gold-200: #291e12; /* very dark bronze */
+  --color-gold-300: #3a2c1a; /* dark bronze */
+  --color-gold-400: #543f25; /* medium dark bronze */
+  --color-gold-500: #806037; /* rich dark gold */
+  --color-gold-600: #9e7a4b; /* dark gold */
+  --color-gold-700: #b38e5c;
+  --color-gold-800: #cda978;
+  --color-gold-900: #e2c9a3; /* light gold borders */
+  --color-gold-950: #f7eedb; /* extremely light warm cream for tag pills background! */
+}
+
+body {
+  background: var(--background-gradient);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Transition for smooth theme switching */
+body, section, div, header, footer, a, button, select, input, textarea, h1, h2, h3, h4, p, span, svg {
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+/* Apply luxury text shadow to serif headings in light mode */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+.font-serif {
+  text-shadow: var(--heading-shadow);
+}
+
+/* Globally improve readability of paragraph light fonts */
+p, .font-light, .text-sm {
+  font-weight: 400 !important; /* Force to normal weight to avoid thin/unreadable lines */
+  letter-spacing: 0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #c5a880;
+  color: #0a0a0a;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Map styling */
+iframe {
+  transition: filter 0.4s ease;
+  filter: var(--map-filter);
+}
+
+/* Contact form input bg adjustment */
+input, textarea, select {
+  background-color: var(--input-bg) !important;
+}
+
+/* Luxury Glow Utility Classes */
+.gold-glow {
+  box-shadow: 0 0 40px -10px rgba(197, 168, 128, 0.2);
+}
+.gold-border-glow {
+  box-shadow: var(--card-shadow);
+}
+.glass-panel {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow), var(--card-inner-glow);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(197, 168, 128, 0.5);
+  box-shadow: var(--card-shadow), var(--card-inner-glow), 0 0 30px rgba(197, 168, 128, 0.15);
+}
+
+/* Custom Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s infinite ease-in-out;
+}
