@@ -73,9 +73,9 @@ export default function Contact() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
+          <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
             Get In Touch
-          </h2>
+          </h4>
           <p className="text-3xl md:text-5xl font-serif font-light tracking-wide text-gold-100 mb-6">
             Bespoke <span className="font-normal italic text-gold-400">Consultation & Enquiry</span>
           </p>
@@ -92,12 +92,12 @@ export default function Contact() {
             
             {/* Info details */}
             <div className="p-8 rounded-2xl glass-panel relative gold-border-glow space-y-6 shrink-0">
-              <h3 className="text-xl font-serif text-gold-200 tracking-wide mb-2">Fragnence Boutique</h3>
+              <h3 className="text-xl font-serif text-gold-200 tracking-wide mb-2">Fragrence Boutique</h3>
               
               <div className="flex items-start text-sm">
                 <MapPin className="text-gold-500 mr-4 shrink-0 mt-0.5" size={18} />
                 <div>
-                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs mb-1">Our Location</h4>
+                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs sm:text-sm mb-1">Our Location</h4>
                   <p className="text-charcoal-300 leading-relaxed font-light">{siteConfig.address}</p>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export default function Contact() {
               <div className="flex items-start text-sm">
                 <Phone className="text-gold-500 mr-4 shrink-0 mt-0.5" size={18} />
                 <div>
-                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs mb-1">Call / WhatsApp</h4>
+                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs sm:text-sm mb-1">Call / WhatsApp</h4>
                   <a
                     href={`tel:${siteConfig.phoneFormatted}`}
                     className="text-gold-300 hover:text-gold-400 transition-colors font-medium text-base block mb-0.5 hover:underline"
@@ -129,7 +129,7 @@ export default function Contact() {
               <div className="flex items-start text-sm">
                 <Mail className="text-gold-500 mr-4 shrink-0 mt-0.5" size={18} />
                 <div>
-                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs mb-1">Email Correspondence</h4>
+                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs sm:text-sm mb-1">Email Correspondence</h4>
                   <p className="text-charcoal-300 font-light">{siteConfig.email}</p>
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function Contact() {
               <div className="flex items-start text-sm">
                 <Clock className="text-gold-500 mr-4 shrink-0 mt-0.5" size={18} />
                 <div>
-                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs mb-1">Boutique Hours</h4>
+                  <h4 className="font-semibold text-gold-100 uppercase tracking-wider text-xs sm:text-sm mb-1">Boutique Hours</h4>
                   <p className="text-charcoal-300 font-light">{siteConfig.hours}</p>
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function Contact() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Fragnence Perfumes Surat Store Map Location"
+                title="Fragrence Perfumes Surat Store Map Location"
               />
             </div>
             
@@ -169,7 +169,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-sm">Enquiry Submitted Successfully</h4>
                     <p className="text-xs text-charcoal-300 mt-1 font-light leading-relaxed">
-                      Thank you for contacting Fragnence. Our fragrance advisors in Surat will review your specifications and contact you on the phone number provided within 2-4 hours.
+                      Thank you for contacting Fragrence. Our fragrance advisors in Surat will review your specifications and contact you on the phone number provided within 2-4 hours.
                     </p>
                   </div>
                 </div>

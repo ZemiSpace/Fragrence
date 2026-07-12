@@ -8,6 +8,7 @@ import { Star, Heart, ShoppingBag, Check, ArrowLeft, ShieldCheck, ChevronLeft, C
 import { catalogProducts, CatalogProduct } from "@/data/catalog";
 import { useCart } from "@/lib/CartContext";
 import { cn } from "@/lib/utils";
+import { fetchProductById } from "@/lib/supabase";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -25,16 +26,25 @@ export default function ProductPage({ params }: PageProps) {
 
   const { addToCart, toggleWishlist, isInWishlist } = useCart();
 
-  // Find product from catalog
+  // Find product from catalog / Supabase
   useEffect(() => {
+    // Set fallback immediately
     const foundProduct = catalogProducts.find((p) => p.id === id);
     if (foundProduct) {
       setProduct(foundProduct);
-      setActiveImageIndex(0);
-      setSelectedSizeIndex(0);
-      setQuantity(1);
-      setAddedNotification(false);
     }
+
+    // Fetch from Supabase
+    fetchProductById(id).then((dbProduct) => {
+      if (dbProduct) {
+        setProduct(dbProduct);
+      }
+    });
+
+    setActiveImageIndex(0);
+    setSelectedSizeIndex(0);
+    setQuantity(1);
+    setAddedNotification(false);
   }, [id]);
 
   if (!product) {

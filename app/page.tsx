@@ -1,6 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import Categories from "@/components/sections/Categories";
-import FragnenceChoice from "@/components/sections/FragnenceChoice";
+import FragrenceChoice from "@/components/sections/FragrenceChoice";
 import GiftHampers from "@/components/sections/GiftHampers";
 import Encyclopedia from "@/components/sections/Encyclopedia";
 import Offers from "@/components/sections/Offers";
@@ -18,7 +18,7 @@ export default function Home() {
       <Categories />
       
       {/* 3. Interactive Quiz scent recommendation */}
-      <FragnenceChoice />
+      <FragrenceChoice />
       
       {/* 4. Customized Gift Arrangement Hampers */}
       <GiftHampers />

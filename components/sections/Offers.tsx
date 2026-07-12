@@ -54,7 +54,7 @@ export default function Offers() {
       const event = new CustomEvent("select-enquiry-type", {
         detail: {
           type: "general",
-          message: "Hi Fragnence! I'm interested in knowing more about your current active offers or seasonal discounts on luxury perfumes and custom hampers."
+          message: "Hi Fragrence! I'm interested in knowing more about your current active offers or seasonal discounts on luxury perfumes and custom hampers."
         }
       });
       window.dispatchEvent(event);
@@ -70,9 +70,9 @@ export default function Offers() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
+          <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
             Exclusive Benefits
-          </h2>
+          </h4>
           <p className="text-3xl md:text-5xl font-serif font-light tracking-wide text-gold-100 mb-6">
             Seasonal <span className="font-normal italic text-gold-400">Privileges & Offers</span>
           </p>
@@ -83,7 +83,7 @@ export default function Offers() {
         <div className="glass-panel rounded-3xl p-8 md:p-16 shadow-2xl relative overflow-hidden gold-border-glow bg-gradient-to-r from-charcoal-900 via-gold-950/20 to-charcoal-900 mb-16">
           {/* Decorative Corner Golden Ribbon effect */}
           <div className="absolute top-0 right-0 w-32 h-32 overflow-hidden pointer-events-none hidden sm:block">
-            <div className="absolute top-6 -right-10 w-44 bg-gradient-to-r from-gold-600 to-gold-400 text-charcoal-950 text-[10px] font-bold uppercase tracking-widest text-center py-1.5 rotate-45 shadow-md">
+            <div className="absolute top-6 -right-10 w-44 bg-gradient-to-r from-gold-600 to-gold-400 text-charcoal-950 text-xs font-bold uppercase tracking-widest text-center py-1.5 rotate-45 shadow-md">
               Special Privilege
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function Offers() {
             
             {/* Promotion Details */}
             <div className="lg:col-span-8 space-y-6">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-950/60 border border-gold-900/30 text-gold-400 text-[10px] font-bold uppercase tracking-widest">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded bg-gold-950/60 border border-gold-900/30 text-gold-400 text-xs font-bold uppercase tracking-widest">
                 <Tag size={14} className="text-gold-500" />
                 <span>Evergreen Store Privilege</span>
               </div>
@@ -148,7 +148,7 @@ export default function Offers() {
         {/* Dynamic Discount Offer Tiers (NEW Lengthy Content!) */}
         <div className="mb-16">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-2">Privilege Gifting</h4>
+            <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-gold-500 mb-2">Privilege Gifting</h4>
             <p className="text-xl md:text-2xl font-serif text-gold-100 font-light">Purchase Tiers & Complimentary Gifts</p>
             <div className="h-[1.5px] w-12 bg-gold-900/40 mx-auto mt-2" />
           </div>
@@ -176,14 +176,14 @@ export default function Offers() {
                       <Percent size={14} className="mr-1.5" />
                       {tier.discount}
                     </p>
-                    <p className="text-xs text-charcoal-300 leading-relaxed font-light">
+                    <p className="text-xs sm:text-sm text-charcoal-300 leading-relaxed font-light">
                       <strong className="text-gold-200">Gifting perk:</strong> {tier.gift}
                     </p>
                   </div>
 
                   <ul className="space-y-2.5">
                     {tier.perks.map((perk, i) => (
-                      <li key={i} className="text-xs text-charcoal-400 flex items-start leading-relaxed">
+                      <li key={i} className="text-xs sm:text-sm text-charcoal-400 flex items-start leading-relaxed">
                         <ShieldCheck size={12} className="mr-2 text-gold-600 shrink-0 mt-0.5" />
                         <span>{perk}</span>
                       </li>
@@ -214,7 +214,7 @@ export default function Offers() {
               >
                 <Calendar size={18} className="text-gold-700 mb-2.5" />
                 <h4 className="text-xs uppercase tracking-wider font-bold text-gold-200 mb-0.5">{item.title}</h4>
-                <p className="text-[10px] text-gold-500 tracking-widest uppercase mb-1">{item.period}</p>
+                <p className="text-xs sm:text-sm text-gold-500 tracking-widest uppercase mb-1">{item.period}</p>
                 <p className="text-xs text-charcoal-400 font-light">{item.detail}</p>
               </div>
             ))}

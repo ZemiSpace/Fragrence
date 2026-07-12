@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Designer perfumes Gujarat",
     "Best attar store Surat",
     "Custom gift hampers Surat",
-    "Fragnence Surat Ester Lee",
+    "Fragrence Surat Ester Lee",
     "Magan Lal perfume Surat",
     "Surat perfume boutique",
     "Scent recommendation Surat"
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://fragnenceperfumes.com",
+    url: "https://fragrenceperfumes.com",
     title: `${siteConfig.name} | Luxury & Designer Perfume Boutique in Surat`,
     description: siteConfig.seo.description,
     siteName: siteConfig.name,
     images: [
       {
-        url: "https://fragnenceperfumes.com/images/og-image.jpg",
+        url: "https://fragrenceperfumes.com/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} Perfumes Surat`,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} | Luxury & Designer Perfume Boutique`,
     description: siteConfig.seo.description,
-    images: ["https://fragnenceperfumes.com/images/og-image.jpg"],
+    images: ["https://fragrenceperfumes.com/images/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -78,9 +78,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": siteConfig.name,
-    "image": "https://fragnenceperfumes.com/images/luxury.jpg", // Fallback URL
-    "@id": "https://fragnenceperfumes.com/#localbusiness",
-    "url": "https://fragnenceperfumes.com",
+    "image": "https://fragrenceperfumes.com/images/luxury.jpg", // Fallback URL
+    "@id": "https://fragrenceperfumes.com/#localbusiness",
+    "url": "https://fragrenceperfumes.com",
     "telephone": siteConfig.phone,
     "priceRange": "$$$",
     "address": {

@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/lib/CartContext";
 import { catalogProducts } from "@/data/catalog";
+import { fetchProducts } from "@/lib/supabase";
+import { useState, useEffect } from "react";
 
 interface WishlistDrawerProps {
   isOpen: boolean;
@@ -14,9 +16,18 @@ interface WishlistDrawerProps {
 
 export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps) {
   const { wishlist, toggleWishlist, addToCart } = useCart();
+  const [products, setProducts] = useState(catalogProducts);
+
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      if (data && data.length > 0) {
+        setProducts(data);
+      }
+    });
+  }, []);
 
   // Filter catalog items that are in the wishlist
-  const favoritedProducts = catalogProducts.filter((p) => wishlist.includes(p.id));
+  const favoritedProducts = products.filter((p) => wishlist.includes(p.id));
 
   const handleMoveToCart = (product: any) => {
     addToCart({

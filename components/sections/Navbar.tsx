@@ -10,7 +10,7 @@ import CartDrawer from "@/components/CartDrawer";
 import WishlistDrawer from "@/components/WishlistDrawer";
 import { cn } from "@/lib/utils";
 
-// Removed "Fragnence Choice" from nav links as requested
+// Removed "Fragrence Choice" from nav links as requested
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
   { href: "#products", label: "Products" },

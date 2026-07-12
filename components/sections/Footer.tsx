@@ -55,7 +55,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-charcoal-900 border border-gold-900/10 text-charcoal-400 hover:text-gold-400 hover:border-gold-500/40 transition-colors cursor-pointer flex items-center justify-center"
-                aria-label="Follow Fragnence Surat on Instagram"
+                aria-label="Follow Fragrence Surat on Instagram"
               >
                 <svg
                   className="h-[18px] w-[18px] stroke-current fill-none stroke-[2]"
@@ -74,7 +74,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-charcoal-900 border border-gold-900/10 text-charcoal-400 hover:text-gold-400 hover:border-gold-500/40 transition-colors cursor-pointer flex items-center justify-center"
-                aria-label="Follow Fragnence Surat on Facebook"
+                aria-label="Follow Fragrence Surat on Facebook"
               >
                 <svg
                   className="h-[18px] w-[18px] fill-current"
@@ -89,7 +89,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-full bg-charcoal-900 border border-gold-900/10 text-charcoal-400 hover:text-[#25D366] hover:border-[#25D366]/40 transition-colors cursor-pointer"
-                aria-label="Chat with Fragnence Surat on WhatsApp"
+                aria-label="Chat with Fragrence Surat on WhatsApp"
               >
                 <MessageCircle size={18} className="fill-current" />
               </a>

@@ -13,9 +13,9 @@ export default function Encyclopedia() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
+          <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
             Scent Education
-          </h2>
+          </h4>
           <p className="text-3xl md:text-5xl font-serif font-light tracking-wide text-gold-100 mb-6">
             Fragrance <span className="font-normal italic text-gold-400">Encyclopedia</span>
           </p>
@@ -54,7 +54,7 @@ export default function Encyclopedia() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-4 p-8 rounded-2xl bg-charcoal-950 border border-gold-900/10 gold-border-glow">
                 <h4 className="text-2xl font-serif text-gold-100 mb-3">{perfumeNotesData.title}</h4>
-                <p className="text-xs font-semibold text-gold-500 tracking-wider uppercase mb-4">{perfumeNotesData.subtitle}</p>
+                <h4 className="text-xs sm:text-sm font-semibold text-gold-500 tracking-wider uppercase mb-4">{perfumeNotesData.subtitle}</h4>
                 <p className="text-sm text-charcoal-300 leading-relaxed font-light">
                   {perfumeNotesData.description} Expanding the notes below allows you to see how your fragrance changes over the hours.
                 </p>
@@ -77,7 +77,7 @@ export default function Encyclopedia() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-4 p-8 rounded-2xl bg-charcoal-950 border border-gold-900/10 gold-border-glow">
                 <h4 className="text-2xl font-serif text-gold-100 mb-3">{fragranceFamiliesData.title}</h4>
-                <p className="text-xs font-semibold text-gold-500 tracking-wider uppercase mb-4">{fragranceFamiliesData.subtitle}</p>
+                <h4 className="text-xs sm:text-sm font-semibold text-gold-500 tracking-wider uppercase mb-4">{fragranceFamiliesData.subtitle}</h4>
                 <p className="text-sm text-charcoal-300 leading-relaxed font-light">
                   {fragranceFamiliesData.description} Find which personality resonates with you most to narrow down your preferences.
                 </p>
@@ -100,7 +100,7 @@ export default function Encyclopedia() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-4 p-8 rounded-2xl bg-charcoal-950 border border-gold-900/10 gold-border-glow">
                 <h4 className="text-2xl font-serif text-gold-100 mb-3">{concentrationsData.title}</h4>
-                <p className="text-xs font-semibold text-gold-500 tracking-wider uppercase mb-4">{concentrationsData.subtitle}</p>
+                <h4 className="text-xs sm:text-sm font-semibold text-gold-500 tracking-wider uppercase mb-4">{concentrationsData.subtitle}</h4>
                 <p className="text-sm text-charcoal-300 leading-relaxed font-light">
                   {concentrationsData.description} Knowing concentration levels allows you to purchase with clarity on how far the scent projects.
                 </p>
@@ -123,7 +123,7 @@ export default function Encyclopedia() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-4 p-8 rounded-2xl bg-charcoal-950 border border-gold-900/10 gold-border-glow">
                 <h4 className="text-2xl font-serif text-gold-100 mb-3">Scent Care & Guide</h4>
-                <p className="text-xs font-semibold text-gold-500 tracking-wider uppercase mb-4">Application & Preservation</p>
+                <h4 className="text-xs sm:text-sm font-semibold text-gold-500 tracking-wider uppercase mb-4">Application & Preservation</h4>
                 <p className="text-sm text-charcoal-300 leading-relaxed font-light">
                   Perfume is a delicate chemical composition. Heat, sunlight, and friction can break down olfactory molecules, causing valuable extracts to spoil.
                 </p>

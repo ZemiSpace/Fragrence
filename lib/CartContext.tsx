@@ -37,8 +37,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Load cart and wishlist from LocalStorage on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem("fragnence_cart");
-    const savedWishlist = localStorage.getItem("fragnence_wishlist");
+    const savedCart = localStorage.getItem("fragrence_cart");
+    const savedWishlist = localStorage.getItem("fragrence_wishlist");
     if (savedCart) {
       try {
         setCart(JSON.parse(savedCart));
@@ -59,13 +59,13 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   // Save cart and wishlist to LocalStorage on updates
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem("fragnence_cart", JSON.stringify(cart));
+      localStorage.setItem("fragrence_cart", JSON.stringify(cart));
     }
   }, [cart, mounted]);
 
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem("fragnence_wishlist", JSON.stringify(wishlist));
+      localStorage.setItem("fragrence_wishlist", JSON.stringify(wishlist));
     }
   }, [wishlist, mounted]);
 
@@ -126,7 +126,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const whatsappCheckout = () => {
     if (cart.length === 0) return;
 
-    let message = `Hi Fragnence! I would like to place an order from your Surat Boutique boutique:\n\n`;
+    let message = `Hi Fragrence! I would like to place an order from your Surat Boutique boutique:\n\n`;
     cart.forEach((item) => {
       message += `• *${item.name}* (${item.size}) - ${item.quantity}x @ ₹${item.price.toLocaleString("en-IN")}\n`;
     });

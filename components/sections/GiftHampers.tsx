@@ -76,9 +76,9 @@ export default function GiftHampers() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
+          <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
             Bespoke Gifting
-          </h2>
+          </h4>
           <p className="text-3xl md:text-5xl font-serif font-light tracking-wide text-gold-100 mb-6">
             Premium <span className="font-normal italic text-gold-400">Gift Hampers</span>
           </p>
@@ -97,7 +97,7 @@ export default function GiftHampers() {
             </h3>
             
             <p className="text-sm md:text-base text-charcoal-300 leading-relaxed font-light mb-8">
-              At Fragnence, we understand that a gift is a reflection of your esteem. We offer custom curation where you select the fragrance profile, packaging chest, and custom calligraphy cards. Our design specialists pack each hamper in Surat with pristine precision.
+              At Fragrence, we understand that a gift is a reflection of your esteem. We offer custom curation where you select the fragrance profile, packaging chest, and custom calligraphy cards. Our design specialists pack each hamper in Surat with pristine precision.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -234,7 +234,7 @@ export default function GiftHampers() {
             />
             {/* Elegant Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent flex flex-col justify-end p-6">
-              <span className="text-[10px] font-bold tracking-[0.25em] text-gold-400 uppercase mb-1">Concept Styling</span>
+              <h4 className="text-xs sm:text-sm font-bold tracking-[0.25em] text-gold-400 uppercase mb-1">Concept Styling</h4>
               <h4 className="text-xl font-serif text-gold-100 font-medium">Velvet Floral Anniversary Hamper</h4>
             </div>
           </div>
@@ -264,7 +264,7 @@ export default function GiftHampers() {
                   {concept.occasions.map((occ) => (
                     <span 
                       key={occ} 
-                      className="text-[9px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-gold-950/30 text-gold-500 border border-gold-900/10"
+                      className="text-[11px] sm:text-xs uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-gold-950/30 text-gold-500 border border-gold-900/10"
                     >
                       {occ}
                     </span>

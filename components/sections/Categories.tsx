@@ -8,6 +8,7 @@ import { Star, Heart, ShoppingBag, Eye, Check } from "lucide-react";
 import { catalogProducts, CatalogProduct } from "@/data/catalog";
 import { useCart } from "@/lib/CartContext";
 import { cn } from "@/lib/utils";
+import { fetchProducts } from "@/lib/supabase";
 
 interface ProductCardProps {
   product: CatalogProduct;
@@ -98,7 +99,7 @@ function ProductCard({
         </button>
 
         {/* Discount percentage tag */}
-        <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-green-500/90 border border-green-500/20 text-white text-[9px] font-bold uppercase tracking-wider shadow-sm">
+        <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-green-500/90 border border-green-500/20 text-white text-xs font-bold uppercase tracking-wider shadow-sm">
           {discountPercent}% OFF
         </div>
 
@@ -122,9 +123,9 @@ function ProductCard({
       {/* Scent Info details */}
       <div className="flex-grow flex flex-col justify-between">
         <div>
-          <span className="text-[8px] font-bold tracking-[0.2em] text-gold-500 uppercase block mb-1">
+          <h4 className="text-xs font-bold tracking-[0.2em] text-gold-500 uppercase block mb-1">
             {product.category}
-          </span>
+          </h4>
           <h3 className="text-base font-serif text-gold-100 font-medium tracking-wide mb-1 truncate group-hover:text-gold-400 transition-colors">
             {product.name}
           </h3>
@@ -140,7 +141,7 @@ function ProductCard({
                 />
               ))}
             </div>
-            <span className="text-[9px] text-charcoal-400 font-semibold">({product.reviewCount})</span>
+            <span className="text-xs text-charcoal-400 font-semibold">({product.reviewCount})</span>
           </div>
         </div>
 
@@ -158,7 +159,7 @@ function ProductCard({
       {/* Add to Bag CTA button */}
       <button
         onClick={(e) => handleQuickAdd(e, product)}
-        className="w-full inline-flex items-center justify-center bg-transparent border border-gold-500 text-gold-200 group-hover:bg-gold-500 group-hover:text-charcoal-950 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer"
+        className="w-full inline-flex items-center justify-center bg-transparent border border-gold-500 text-gold-200 group-hover:bg-gold-500 group-hover:text-charcoal-950 py-2.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer"
         style={{ minHeight: "36px" }}
       >
         {isAdded ? (
@@ -179,6 +180,15 @@ export default function Categories() {
   const router = useRouter();
   const { addToCart, toggleWishlist, isInWishlist } = useCart();
   const [addedItemIds, setAddedItemIds] = useState<string[]>([]);
+  const [products, setProducts] = useState<CatalogProduct[]>(catalogProducts);
+
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      if (data && data.length > 0) {
+        setProducts(data);
+      }
+    });
+  }, []);
 
   const handleOpenDetails = (product: CatalogProduct) => {
     router.push(`/product/${product.id}`);
@@ -211,9 +221,9 @@ export default function Categories() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
+          <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-gold-500 mb-3">
             Luxury Catalog
-          </h2>
+          </h4>
           <p className="text-3xl md:text-5xl font-serif font-light tracking-wide text-gold-100 mb-6">
             Bespoke <span className="font-normal italic text-gold-400">Olfactory Collections</span>
           </p>
@@ -225,7 +235,7 @@ export default function Categories() {
 
         {/* Storefront Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {catalogProducts.map((product, index) => (
+          {products.map((product, index) => (
             <ProductCard
               key={product.id}
               product={product}

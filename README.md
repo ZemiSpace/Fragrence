@@ -1,6 +1,6 @@
-# Fragnence — Luxury Perfume Store Landing Page
+# Fragrence — Luxury Perfume Store Landing Page
 
-This repository contains a production-grade, responsive, single-page marketing landing website for **Fragnence**, a premium perfume retail boutique established in **Surat, Gujarat, India** since **2008**.
+This repository contains a production-grade, responsive, single-page marketing landing website for **Fragrence**, a premium perfume retail boutique established in **Surat, Gujarat, India** since **2008**.
 
 ---
 
@@ -27,7 +27,7 @@ This repository contains a production-grade, responsive, single-page marketing l
 
 ## Features Implemented
 1. **Unified Site Data Config**: All business variables (Surat address, contact phone, daily regulars, established year, etc.) are centralized in `siteConfig.ts` for quick editing.
-2. **Fragnence Choice Quiz**: An interactive, multi-step personality-to-scent matchmaking feature that dynamically recommends a custom fragrance profile and links directly to a pre-filled WhatsApp message.
+2. **Fragrence Choice Quiz**: An interactive, multi-step personality-to-scent matchmaking feature that dynamically recommends a custom fragrance profile and links directly to a pre-filled WhatsApp message.
 3. **Pre-filled Contact Forms**: Contact buttons inside "Offers", "Categories", and "Gift Hampers" use custom browser events to scroll the user to the contact form and automatically pre-fill details (e.g. auto-selects "Custom Gift Hamper" with custom request copy).
 4. **LocalBusiness SEO Schema**: Injects a structured `LocalBusiness` JSON-LD schema into the document head containing Surat's address locality, founding date, and founder information for local search crawlers.
 5. **Mobile-First Responsiveness**: Designed to work cleanly starting from 320px up to 1920px. Features a touch-friendly navigation drawer.

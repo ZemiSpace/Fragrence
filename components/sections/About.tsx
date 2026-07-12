@@ -14,13 +14,13 @@ interface TimelineEvent {
 const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     year: "2008",
-    title: "The Genesis of Fragnence",
+    title: "The Genesis of Fragrence",
     description: "Founder Magan Lal establishes the boutique in Surat, Gujarat. Eager to bring pure French absolute extractions and authentic oud oils to local fragrance connoisseurs."
   },
   {
     year: "2013",
     title: "Exclusive Niche Sourcing",
-    description: "Fragnence expands its importing network, forming direct alliances with boutique, family-run fragrance distillers in Grasse, France and Florence, Italy."
+    description: "Fragrence expands its importing network, forming direct alliances with boutique, family-run fragrance distillers in Grasse, France and Florence, Italy."
   },
   {
     year: "2018",
@@ -59,9 +59,9 @@ export default function About() {
 
           {/* Text Story Side */}
           <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-500">
+            <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-gold-500">
               Our Legacy
-            </h2>
+            </h4>
             
             <p className="text-3xl md:text-5xl font-serif font-light tracking-wide text-gold-100 leading-tight">
               A Family Legacy in <br />
@@ -72,11 +72,11 @@ export default function About() {
 
             <div className="space-y-4 text-sm md:text-base text-charcoal-300 font-light leading-relaxed">
               <p>
-                Established in <span className="text-gold-400 font-semibold">{siteConfig.established}</span> by visionary founder <span className="text-gold-400 font-semibold">{siteConfig.founder}</span>, Fragnence began as a humble perfume house in Surat, Gujarat. Driven by a deep passion for natural raw oils and niche European brands, Magan Lal dedicated himself to introducing the world&apos;s finest olfactory traditions to local perfume lovers.
+                Established in <span className="text-gold-400 font-semibold">{siteConfig.established}</span> by visionary founder <span className="text-gold-400 font-semibold">{siteConfig.founder}</span>, Fragrence began as a humble perfume house in Surat, Gujarat. Driven by a deep passion for natural raw oils and niche European brands, Magan Lal dedicated himself to introducing the world&apos;s finest olfactory traditions to local perfume lovers.
               </p>
               
               <p>
-                Today, the legacy continues under the ownership of <span className="text-gold-400 font-semibold">{siteConfig.owner}</span>. Keeping the core principles of trust, warmth, and individualized consultations intact, Ester Lee has expanded Fragnence into a premier boutique destination for rare oud blends, couture designer brands, and customized gifting.
+                Today, the legacy continues under the ownership of <span className="text-gold-400 font-semibold">{siteConfig.owner}</span>. Keeping the core principles of trust, warmth, and individualized consultations intact, Ester Lee has expanded Fragrence into a premier boutique destination for rare oud blends, couture designer brands, and customized gifting.
               </p>
 
               <p>
@@ -91,7 +91,7 @@ export default function About() {
                   <Landmark size={20} />
                 </div>
                 <div>
-                  <h4 className="text-xs uppercase tracking-wider font-bold text-gold-200">Surat Born</h4>
+                  <h4 className="text-xs sm:text-sm uppercase tracking-wider font-bold text-gold-200">Surat Born</h4>
                   <p className="text-xs text-charcoal-400 font-light">Serving Gujarat since 2008</p>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function About() {
                   <Heart size={20} />
                 </div>
                 <div>
-                  <h4 className="text-xs uppercase tracking-wider font-bold text-gold-200">66+ Daily Regulars</h4>
+                  <h4 className="text-xs sm:text-sm uppercase tracking-wider font-bold text-gold-200">66+ Daily Regulars</h4>
                   <p className="text-xs text-charcoal-400 font-light">Clientele built on trust</p>
                 </div>
               </div>

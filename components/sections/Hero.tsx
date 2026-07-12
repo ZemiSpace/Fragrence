@@ -218,7 +218,7 @@ export default function Hero() {
               className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-serif font-light text-gold-100 tracking-tight leading-[1.1] mb-8"
             >
               Masterpiece <br />
-              <span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-200 block mt-2">
+              <span className="font-normal italic text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-200 block mt-2 pb-3 pr-4">
                 Fragrances
               </span>
             </motion.h1>
@@ -261,7 +261,7 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Heroic Floating Bottle (Constrained inside lg:col-span-5 to prevent grid overlaps) */}
-          <div className="lg:col-span-5 flex justify-center items-center relative h-[350px] sm:h-[450px] md:h-[500px] w-full order-1 lg:order-2 z-10 mt-6 lg:mt-0">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative h-[350px] sm:h-[450px] md:h-[500px] w-full order-1 lg:order-2 z-10 mt-6 lg:mt-0">
             
             {/* Background rotating gold orbital rings */}
             <div className="absolute w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] h-[280px] sm:h-[360px] md:h-[440px] lg:h-[480px] border-[1px] border-dashed border-gold-500/25 rounded-full animate-[spin_60s_linear_infinite]" />
@@ -276,7 +276,7 @@ export default function Hero() {
             >
               <Image
                 src="/images/luxury_perfume.png"
-                alt="Fragnence Signature Perfume Decanter"
+                alt="Fragrence Signature Perfume Decanter"
                 fill
                 sizes="(max-w-1024px) 80vw, 40vw"
                 className="object-contain drop-shadow-[0_35px_45px_rgba(0,0,0,0.75)]"
